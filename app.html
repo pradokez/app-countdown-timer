@@ -3,24 +3,35 @@
   <head>
     <title>Countdown App</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="/scss/app.css">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="/scss/app.css" />
   </head>
   <body>
     <div class="container">
-      <input type="text" placeholder="Qual é o evento?" class="event-name"/>
-      <input type="date" class="event-date"/>
-      <div class="countdown">
-        <p class="day">D</p>
-        <p class="countdown-label">Days</p>
-
-        <p class="hour">H</p>
-        <p class="countdown-label">Days</p>
-
-        <p class="minute">M</p>
-        <p class="countdown-label">Days</p>
+      <div class="box">
+        <input type="text" placeholder="Qual é o evento?" class="event-name input" />
+        <input type="date" class="event-date input" />
+        <div class="countdown">
+          <div class="days column">
+            <p>D</p>
+            <p class="countdown-label">Days</p>
+          </div>
+          <div class="hours column">
+            <p>H</p>
+            <p class="countdown-label">Hours</p>
+          </div>
+          <div class="mimutes column">
+            <p>M</p>
+            <p class="countdown-label">Minutes</p>
+          </div>
+          <div class="seconds column">
+            <p>S</p>
+            <p class="countdown-label">Seconds</p>
+          </div>
+         
+        </div>
+        <button class="start-button" type="button">START</button>
       </div>
     </div>
-    <button type="button">START</button>
   </body>
 </html>
