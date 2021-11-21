@@ -1,0 +1,22 @@
+{
+  "name": "app-countdown-timer",
+  "version": "1.0.0",
+  "description": "countdown app to important events",
+  "main": "app.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pradokez/app-countdown-timer.git"
+  },
+  "keywords": [
+    "countdown"
+  ],
+  "author": "Keziah Prado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pradokez/app-countdown-timer/issues"
+  },
+  "homepage": "https://github.com/pradokez/app-countdown-timer#readme"
+}
