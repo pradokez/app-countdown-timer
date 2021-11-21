@@ -1,20 +1,99 @@
 //variables
 $blue: #cfecf2;
 $baby-blue: #def0f2;
-$pink: #fdd5de;
+$pink: rgba(242, 159, 179, 1);
 $baby-pink: #fde2e7;
 $dark-blue: #c4d1f3;
 
+@import url("https://fonts.googleapis.com/css2?family=Coiny&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap");
 
-body{
-    background-color: $dark-blue
+body {
+  margin: 0;
+  background-color: $dark-blue;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-input {
-    width: 30%;
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.input {
+  margin-bottom: 15px;
+  width: 60%;
+  padding: 3px;
+  border-radius: 11px;
+  border-width: 1px;
+  padding: 5px 0 5px 10px;
+  font-family: Dosis;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 30px 30px 30px;
+  font-family: Dosis;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 10px 10px 10px;
+
+  &::after {
+    content: ":";
+    margin-left: 55px;
+    position: absolute;
+  }
+  &:last-child {
+    &::after {
+        display: none;
+    }
+}
+}
+
+.countdown-label {
+    border-top: 1px;
+    border-style: solid;
+    border-color: $pink;
+    padding: 4px 3px 0 3px;
+    margin-top: 10px;
+}
+
+.start-button {
+  font-size: 20px;
+  font-family: Coiny;
+  width: 121px;
+  height: 40px;
+  border-width: 0px;
+  color: rgba(255, 255, 255, 1);
+  border-color: rgba(110, 57, 57, 1);
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+  box-shadow: 0px 10px 14px -7px rgba(157, 182, 245, 1);
+  text-shadow: 0px 1px 0px rgba(251, 177, 194, 1);
+  background: linear-gradient(rgba(252, 189, 201, 1), rgba(242, 159, 179, 1));
+}
+
+.start-button:hover {
+  background: linear-gradient(rgba(242, 159, 179, 1), rgba(252, 189, 201, 1));
 }
