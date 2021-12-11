@@ -31,7 +31,6 @@ function submit() {
     console.log(`${Math.floor(hoursRemain)} horas restantes`);
     console.log(`${Math.floor(minutesRemain)} minutos restantes`);
     console.log(`${Math.floor(secondsRemain)} segundos restantes`);
-    console.log(eventDay - today);
     
   }
 }
