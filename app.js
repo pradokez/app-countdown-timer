@@ -19,7 +19,7 @@ function submit() {
     );
   } else {
     const daysRemain = (eventDay - today) / 1000 / 60 / 60 / 24;
-    const hoursRemain = (daysRemain - Math.floor(daysRemain)) * 24;
+    const hoursRemain = (daysRemain - Math.floor(daysRemain)) * 24 + 3;
 
     const minutesRemain = (hoursRemain - Math.floor(hoursRemain)) * 60;
     
@@ -31,6 +31,7 @@ function submit() {
     console.log(`${Math.floor(hoursRemain)} horas restantes`);
     console.log(`${Math.floor(minutesRemain)} minutos restantes`);
     console.log(`${Math.floor(secondsRemain)} segundos restantes`);
+    console.log(eventDay - today);
     
   }
 }
