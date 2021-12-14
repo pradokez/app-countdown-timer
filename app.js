@@ -10,27 +10,26 @@ function submit() {
   const eventDate = document.querySelector(".event-date");
   const today = new Date();
   const eventDay = new Date(eventDate.value);
+  const daysRemain = (eventDay - today) / 1000 / 60 / 60 / 24;
+  const hoursRemain = (daysRemain - Math.floor(daysRemain)) * 24 + 3;
+
+  const minutesRemain = (hoursRemain - Math.floor(hoursRemain)) * 60;
+
+  const secondsRemain = (minutesRemain - Math.floor(minutesRemain)) * 60;
 
   if (eventName.value === "") {
     alert("Epa, parece que você esqueceu de me dizer o nome do evento!");
-  } else if (eventDate.value === "") {
+  } else if (eventDate.value === "" || daysRemain < 0) {
     alert(
       "Olha, pra esse contador funcionar, você precisa inserir uma data válida."
     );
   } else {
-    const daysRemain = (eventDay - today) / 1000 / 60 / 60 / 24;
-    const hoursRemain = (daysRemain - Math.floor(daysRemain)) * 24;
-
-    const minutesRemain = (hoursRemain - Math.floor(hoursRemain)) * 60;
-    
-    const secondsRemain = (minutesRemain - Math.floor(minutesRemain)) * 60;
-
-
-    console.log(today);
-    console.log(`${Math.floor(daysRemain)} dias restantes`);
-    console.log(`${Math.floor(hoursRemain)} horas restantes`);
-    console.log(`${Math.floor(minutesRemain)} minutos restantes`);
-    console.log(`${Math.floor(secondsRemain)} segundos restantes`);
-    
+    document.getElementById("days").innerHTML = Math.floor(daysRemain);
+    document.getElementById("hours").innerHTML = Math.floor(hoursRemain);
+    document.getElementById("minutes").innerHTML = Math.floor(minutesRemain);
+    document.getElementById("seconds").innerHTML = Math.floor(secondsRemain);
+    }
+    setInterval('submit()', 1000);
   }
-}
+ 
+
