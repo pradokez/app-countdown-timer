@@ -33,9 +33,16 @@ body {
   border-radius: 10px;
 }
 
+.entry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .input {
   margin-bottom: 15px;
-  width: 60%;
+  width: 100%;
   padding: 3px;
   border-radius: 11px;
   border-width: 1px;
@@ -96,4 +103,8 @@ body {
 
 .start-button:hover {
   background: linear-gradient(rgba(242, 159, 179, 1), rgba(252, 189, 201, 1));
+}
+
+.js-is-hidden{
+  display: none;
 }

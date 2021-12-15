@@ -43,9 +43,25 @@ body {
   border-radius: 10px;
 }
 
+.entry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .input {
   margin-bottom: 15px;
-  width: 60%;
+  width: 100%;
   padding: 3px;
   border-radius: 11px;
   border-width: 1px;
@@ -119,5 +135,9 @@ body {
 .start-button:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#f29fb3), to(#fcbdc9));
   background: linear-gradient(#f29fb3, #fcbdc9);
+}
+
+.js-is-hidden {
+  display: none;
 }
 /*# sourceMappingURL=app.css.map */
