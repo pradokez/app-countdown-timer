@@ -69,6 +69,13 @@ body {
   font-family: Dosis;
 }
 
+.title {
+  font-size: 20px;
+  font-family: Coiny;
+  text-transform: uppercase;
+  color: #f29fb3;
+}
+
 .countdown {
   display: -webkit-box;
   display: -ms-flexbox;

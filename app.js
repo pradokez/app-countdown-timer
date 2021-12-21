@@ -37,7 +37,8 @@ function submit() {
     document.getElementById("hours").innerHTML = Math.floor(hoursRemain);
     document.getElementById("minutes").innerHTML = Math.floor(minutesRemain);
     document.getElementById("seconds").innerHTML = Math.floor(secondsRemain);
-    
+    document.getElementById("title").innerHTML = eventName.value;
+
     hideElements();
   
     }
