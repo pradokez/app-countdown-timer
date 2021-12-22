@@ -10,8 +10,17 @@
   <body>
     <div class="container">
       <div class="box">
-      <input type="text" placeholder="Qual é o evento?" class="event-name input" content=""/>
-        <input type="date" class="event-date input"/>
+        <div class="entry">
+          <input
+            type="text"
+            placeholder="Qual é o evento?"
+            class="event-name input"
+            content=""
+            maxlength="50"
+          />
+          <input type="date" class="event-date input" />
+        </div>
+        <p id="title" class=""></p>
         <div class="countdown">
           <div class="days column">
             <p id="days">D</p>
@@ -29,9 +38,10 @@
             <p id="seconds">S</p>
             <p class="countdown-label">Seconds</p>
           </div>
-         
         </div>
-        <button onclick="submit()" class="start-button" type="button">START</button>
+        <button onclick="submit()" class="start-button" type="button">
+          START
+        </button>
       </div>
     </div>
   </body>

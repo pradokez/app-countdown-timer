@@ -1,3 +1,4 @@
+
 document.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     var btn = document.querySelector(".start-button");
@@ -6,6 +7,10 @@ document.addEventListener("keypress", function (e) {
 });
 
 function submit() {
+  const input = document.querySelector('.entry');
+  const start = document.querySelector('.start-button');
+  const title = document.querySelector('#title');
+
   const eventName = document.querySelector(".event-name");
   const eventDate = document.querySelector(".event-date");
   const today = new Date();
@@ -16,6 +21,12 @@ function submit() {
   const minutesRemain = (hoursRemain - Math.floor(hoursRemain)) * 60;
 
   const secondsRemain = (minutesRemain - Math.floor(minutesRemain)) * 60;
+
+  function hideElements(){
+    input.classList.add("js-is-hidden");
+    start.classList.add("js-is-hidden");
+    title.classList.add("title");
+  }
 
   if (eventName.value === "") {
     alert("Epa, parece que você esqueceu de me dizer o nome do evento!");
@@ -28,8 +39,14 @@ function submit() {
     document.getElementById("hours").innerHTML = Math.floor(hoursRemain);
     document.getElementById("minutes").innerHTML = Math.floor(minutesRemain);
     document.getElementById("seconds").innerHTML = Math.floor(secondsRemain);
+    document.getElementById("title").innerHTML = eventName.value;
+
+    hideElements();
+  
     }
+    
     setInterval('submit()', 1000);
+    
   }
  
 
