@@ -9,6 +9,7 @@ document.addEventListener("keypress", function (e) {
 function submit() {
   const input = document.querySelector('.entry');
   const start = document.querySelector('.start-button');
+  const title = document.querySelector('#title');
 
   const eventName = document.querySelector(".event-name");
   const eventDate = document.querySelector(".event-date");
@@ -24,6 +25,7 @@ function submit() {
   function hideElements(){
     input.classList.add("js-is-hidden");
     start.classList.add("js-is-hidden");
+    title.classList.add("title");
   }
 
   if (eventName.value === "") {
